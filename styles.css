@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  padding: 0;
+  background: url('/img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  position: relative;
+  overflow: hidden; 
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2e8b57;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input, form button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #66cdaa;
+  border-radius: 5px;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #2e8b57;
+}
+
+form button {
+  background: #2e8b57;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #3cb371;
+}
+
+.container-cartoes .cartao {
+  background: rgba(255, 255, 255, 0.9); 
+  border: 1px solid #66cdaa;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.cartao h3 {
+  margin: 0;
+  color: #2e8b57; 
+}
+
+.botoes-cartao {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.botoes-cartao button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botoes-cartao .visualizar {
+  background: #2e8b57; 
+  color: #fff;
+}
+
+.botoes-cartao .editar {
+  background: #3cb371; 
+  color: #fff;
+}
+
+.botoes-cartao .excluir {
+  background: #ff6347; 
+  color: #fff;
+}
+
+.botoes-cartao .visualizar:hover {
+  background: #3cb371; 
+}
+
+.botoes-cartao .editar:hover {
+  background: #2e8b57; 
+}
+
+.botoes-cartao .excluir:hover {
+  background: #d9534f; 
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.conteudo-modal {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #66cdaa;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.conteudo-modal h2 {
+  margin-top: 0;
+  color: #2e8b57; 
+}
+
+.fechar {
+  color: #333;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: #000;
+  text-decoration: none;
+}

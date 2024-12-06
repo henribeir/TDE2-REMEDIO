@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TDE 2 - CRUD</title>
+  <link rel="shortcut icon" type="imagex/png" href="/img/medicamentoIcone.ico ">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TDE 2 - CRUD: Cadastro de Remédios</h1>
+    <form id="formularioRemedio">
+      <input type="text" id="nomeRemedio" placeholder="Nome do Remédio" required>
+      <input type="text" id="fabricanteRemedio" placeholder="Fabricante" required>
+      <input type="number" id="precoRemedio" placeholder="Preço (R$)" step="0.01" required>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <div id="cartoesRemedios" class="container-cartoes">
+      <!-- modal dos remédios que serão gerados a partir da solicitação da visualização -->
+    </div>
+  </div>
+
+  <!-- visualizar os detalhes -->
+  <div id="modal" class="modal">
+    <div class="conteudo-modal">
+      <span class="fechar">&times;</span>
+      <h2>Detalhes do Remédio</h2>
+      <p><strong>Nome:</strong> <span id="detalhesNome"></span></p>
+      <p><strong>Fabricante:</strong> <span id="detalhesFabricante"></span></p>
+      <p><strong>Preço:</strong> R$ <span id="detalhesPreco"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
